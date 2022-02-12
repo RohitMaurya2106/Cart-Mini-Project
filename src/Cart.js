@@ -8,6 +8,7 @@ class Cart extends React.Component {
         <CartItem />
         <CartItem />
         <CartItem />
+        <CartItem />
       </div>
     );
   }

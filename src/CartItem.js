@@ -1,17 +1,7 @@
 import React from 'react';
 
 class CartItem extends React.Component {
-  constructor () {
-    super();
-    this.state = {
-      price: 999,
-      title: 'Mobile Phone',
-      qty: 1,
-      img: ''
-    }
-    // this.increaseQuantity = this.increaseQuantity.bind(this);
-    // this.testing();
-  }
+
 
   // testing () {
   //   const promise = new Promise((resolve, reject) => {
@@ -62,7 +52,7 @@ class CartItem extends React.Component {
   }
   render () {
     console.log('render');
-    const { price, title, qty } = this.state;
+    const { price, title, qty } = this.props.products;
     return (
       <div className="cart-item">
         <div className="left-block">
@@ -77,19 +67,19 @@ class CartItem extends React.Component {
             <img
               alt="increase"
               className="action-icons"
-              src="https://image.flaticon.com/icons/svg/992/992651.svg"
+              src="https://cdn-icons.flaticon.com/png/512/3303/premium/3303893.png?token=exp=1644660809~hmac=b59d3ae66682c2d9aab89a65400d3bbd"
               onClick={this.increaseQuantity}
             />
             <img
               alt="decrease"
               className="action-icons"
-              src="https://image.flaticon.com/icons/svg/1665/1665612.svg"
+              src="https://cdn-icons-png.flaticon.com/512/992/992683.png"
               onClick={this.decreaseQuantity}
             />
             <img
               alt="delete"
               className="action-icons"
-              src="https://image.flaticon.com/icons/svg/1214/1214428.svg"
+              src="https://cdn-icons.flaticon.com/png/512/484/premium/484662.png?token=exp=1644660167~hmac=ccfb6545cbc06edf48a745c0dafcb2ac"
             />
           </div>
         </div>

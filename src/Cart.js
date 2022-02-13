@@ -58,6 +58,14 @@ handleDecreaseFunction=(product)=>{
         products:products
     })
 }
+handleDeleteFunction=(id)=>{
+console.log("Delete Details");
+const { products }=this.state;
+const items=products.filter((item)=>item.id!==id);
+this.setState({
+    products:items
+})
+}
   render () {
       const { products }=this.state;
     return (
@@ -68,6 +76,7 @@ handleDecreaseFunction=(product)=>{
               key={product.id}
               onIncreaseQuantity={this.handleIncreaseFunction}
               onDecreaseQuantity={this.handleDecreaseFunction}
+              onDeleteQuantity={this.handleDeleteFunction}
               />
           })}
         
